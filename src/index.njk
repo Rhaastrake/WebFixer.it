@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teloriparo - Homepage</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asimovian&family=Cal+Sans&family=Edu+SA+Hand:wght@400..700&family=IM+Fell+English+SC&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quando&family=Rationale&family=Tillana:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="src/css/style.css" /> -->
+    <!-- CSS -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link
+      rel="preload"
+      href="/fonts/bootstrap-icons.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/custom.css" />
+
+    <link
+      rel="shortcut icon"
+      href="src/public/favicon.ico"
+      type="image/x-icon"
+    />
+    {% set partials = "src/partials/" %}
+  </head>
+
+  <body>
+    {% include "_header.html" %} {% include "_service.html" %}
+
+    <hr class="container" />
+
+    {% include "_news.html" %} {% include "_features-prices.html" %} {% include
+    "_footer.html" %} {% include "_bugReportModal.html" %} {% include
+    "_privacyInfoModal.html" %} {% include "_notification.html" %}
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/header.js" defer></script>
+    <script src="js/forms.js" defer></script>
+  </body>
+</html>

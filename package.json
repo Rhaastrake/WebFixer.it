@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "sass": "^1.91.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "scripts": {
+    "build": "sass ./src/scss/custom.scss ./src/css/custom.css && eleventy",
+    "serve": "npm run build && concurrently \"eleventy --serve --quiet\" \"sass --watch ./src/scss/custom.scss ./src/css/custom.css\""
+  }
+}
