@@ -1,11 +1,15 @@
 import { showNotification } from "./notification.js";
 
+
+
 (() => {
   "use strict";
 
-  // <-- Definizione necessaria
   const selectedServiceForm = document.querySelector(".selectedServiceForm");
   const selectedServiceOverview = document.querySelector(".selectedServiceOverview");
+
+
+
 
   function attachFormListener(form) {
     if (!form) return;
@@ -41,7 +45,6 @@ import { showNotification } from "./notification.js";
             form.reset();
             form.classList.remove("was-validated");
 
-            // <-- Torna all'overview
             selectedServiceForm.innerHTML = "";
             selectedServiceOverview.classList.remove("d-none");
           }
@@ -50,8 +53,13 @@ import { showNotification } from "./notification.js";
     });
   }
 
+
+
   const existingForms = document.querySelectorAll(".needs-validation");
   existingForms.forEach((form) => attachFormListener(form));
+
+
+
 
   const observer = new MutationObserver((mutationsList) => {
     mutationsList.forEach((mutation) => {

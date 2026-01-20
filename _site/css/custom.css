@@ -17420,6 +17420,10 @@ textarea.form-control-lg {
   content: "爛";
 }
 
+.label {
+  color: red;
+}
+
 :root {
   --header-height: 15vh;
   --neon-pink: #d300d3;
