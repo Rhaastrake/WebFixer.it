@@ -17592,4 +17592,8 @@ h2, .h2 {
   border-radius: 15px;
 }
 
+.form-floating > textarea:not(:placeholder-shown) ~ label::after {
+  background-color: transparent !important;
+}
+
 /*# sourceMappingURL=custom.css.map */
