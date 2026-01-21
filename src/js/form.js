@@ -17,6 +17,7 @@ import { showNotification } from "./notification.js";
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       event.stopPropagation();
+      showNotification("⚠️ Controlla i campi", "2500");
 
       if (!form.checkValidity()) {
         form.classList.add("was-validated");
