@@ -211,7 +211,7 @@ Tutte le configurazioni e le modifiche vengono discusse direttamente con te, gar
   <!-- Dettagli aggiuntivi -->
   <div class="form-floating mb-3">
     <textarea class="form-control auto-expand" id="details" name="details" placeholder="Scopo e funzionamento del server *" style="height:100px; resize:none;" required></textarea>
-    <label for="details">parlami del server che vorresti *</label>
+    <label for="details">Scopo e funzionamento del server *</label>
   </div>
 
   <!-- Privacy -->
