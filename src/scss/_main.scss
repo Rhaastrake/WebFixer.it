@@ -1,30 +1,4 @@
-:root {
-  --header-height: 15vh;
-
-  --neon-blue: rgba(0, 217, 255);
-
-  --border-radius: 18px;
-
-  --size-1: 1.2rem;
-  --size-2: 1.5rem;
-  --size-3: 1.8rem;
-}
-
-.size-1 {
-  font-size: var(--size-1);
-}
-
-.size-2 {
-  font-size: var(--size-2);
-}
-
-.size-3 {
-  font-size: var(--size-3);
-}
-
-.neon-blue {
-  color: var(--neon-blue);
-}
+@import 'variables';
 
 * {
   margin: 0;
@@ -39,7 +13,7 @@ header,
 footer {
   background-color: rgb(18, 18, 18);
   display: flex;
-  height: var(--header-height);
+  height: $header-height;
   justify-content: center;
   text-align: center;
   width: 100%;
@@ -63,25 +37,13 @@ a {
   width: 100%;
 }
 
-.nav .logo img {
+.logo img {
   height: 10vh;
   object-fit: contain;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  color: rgba(0, 217, 255);
-}
-
-h2 {
-  margin-bottom: 15px;
-}
-
 .presentationImage {
-  border-radius: var(--border-radius);
+  border-radius: $border-radius;
   overflow: hidden;
 }
 
@@ -93,79 +55,18 @@ h2 {
 
 .bordered {
   border: 1px solid #9ca3af;
-  border-radius: var(--border-radius);
+  border-radius: $border-radius;
   padding: 15px;
-}
-
-.modernButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 28px;
-  border-radius: var(--border-radius);
-  background-color: rgba(148, 148, 148, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-}
-
-.modernButton:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: #9ca3af;
-}
-
-.modernButton::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  width: 45%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.5),
-    transparent
-  );
-  transform: translateX(-140%);
-  transition: transform 0.8s ease;
-}
-
-.modernButton:hover::before {
-  transform: translateX(240%);
-}
-
-.selectableButton {
-  align-items: center;
-  background-color: rgba(148, 148, 148, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.selectableButton:hover {
-  border-color: #9ca3af;
-}
-
-.selectableButton.active {
-  background-color: rgba(148, 148, 148, 0.6);
-}
-
-.selectableButton i {
-  font-size: var(--size-2);
-  margin-bottom: 10px;
 }
 
 .nav a {
   padding: 10px;
   border: none;
   gap: 15px;
-  font-size: var(--size-1);
+  font-size: $size-1;
 }
 
 .form-select, .form-control {
-  // color: rgba(255, 166, 0, 0.877);
   background-color: rgba(59, 59, 59);
   border-radius: 15px;
 }
@@ -175,7 +76,7 @@ h2 {
 }
 
 .form-floating > textarea:not(:placeholder-shown) ~ label::after {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .modal-body {
@@ -184,38 +85,6 @@ h2 {
   padding-right: 1rem; /* evita che il testo venga coperto dalla scrollbar */
 }
 
-// .form-select {
-//   color: rgba(255, 255, 255, 0.5);
-// }
-
-// .form-floating > .form-control::placeholder,
-// .form-floating > .form-control-plaintext::placeholder {
-//   color: red;
-// }
-
-// .form-control::placeholder {
-//   color: chartreuse;
-//   opacity: 1;
-// }
-
-// .form-floating > textarea:not(:placeholder-shown) ~ label::after {
-//   position: absolute;
-//   inset: 1rem 0.375rem;
-//   z-index: -1;
-//   height: 1.5em;
-//   content: "";
-//   background-color: #d300d3;
-//   border-radius: var(--neon-blue);
-// }
-
-// [data-bs-theme="dark"] {
-//   --bs-secondary-color: rgba(255, 0, 0, 0.5); // qui cambia tutte le var secondarie
-// }
-
-// .form-control::placeholder {
-//   color: var(--bs-secondary-color);
-// }
-
-// label, .form-label {
-//   color: red;
-// }
+.form-floating > label, .form-select {
+  color: $neon-blue;
+}

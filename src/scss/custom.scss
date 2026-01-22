@@ -45,12 +45,13 @@ $bootstrap-icons-font-display: swap;
 
 @import "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 
-// / Bootstrap Animations SCSS /
-@import "_animations";
 
-// / Other scss files */
+//
+// Custom SCSS partials
+//
 @import "_variables";
-@import "_mobile";
-
-// / Custom style SCSS */
+@import "_animations";
 @import "_main";
+@import "_typography";
+@import "_buttons";
+@import "_mobile";

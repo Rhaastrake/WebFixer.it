@@ -1,5 +1,42 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: auto;
+  height: auto;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+  transition: right 0.3s ease;
+  z-index: 9999;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.burgerButtonMobile {
+  align-self: flex-end;
+}
+
+
+
+.burgerButton {
+  display: none;
+}
+
 @media (max-width: 1199.98px) {
   .text-center-md-down {
     text-align: center !important;
+  }
+
+  .nav-links, .nav-extra-links {
+    display: none;
+  }
+
+  .burgerButton {
+    display: block !important;
   }
 }

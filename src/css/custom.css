@@ -17420,36 +17420,6 @@ textarea.form-control-lg {
   content: "爛";
 }
 
-@media (max-width: 1199.98px) {
-  .text-center-md-down {
-    text-align: center !important;
-  }
-}
-:root {
-  --header-height: 15vh;
-  --neon-blue: rgba(0, 217, 255);
-  --border-radius: 18px;
-  --size-1: 1.2rem;
-  --size-2: 1.5rem;
-  --size-3: 1.8rem;
-}
-
-.size-1 {
-  font-size: var(--size-1);
-}
-
-.size-2 {
-  font-size: var(--size-2);
-}
-
-.size-3 {
-  font-size: var(--size-3);
-}
-
-.neon-blue {
-  color: var(--neon-blue);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -17463,7 +17433,7 @@ header,
 footer {
   background-color: rgb(18, 18, 18);
   display: flex;
-  height: var(--header-height);
+  height: 15vh;
   justify-content: center;
   text-align: center;
   width: 100%;
@@ -17487,29 +17457,13 @@ a {
   width: 100%;
 }
 
-.nav .logo img {
+.logo img {
   height: 10vh;
   object-fit: contain;
 }
 
-h1, .h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5 {
-  color: rgb(0, 217, 255);
-}
-
-h2, .h2 {
-  margin-bottom: 15px;
-}
-
 .presentationImage {
-  border-radius: var(--border-radius);
+  border-radius: 18px;
   overflow: hidden;
 }
 
@@ -17521,8 +17475,62 @@ h2, .h2 {
 
 .bordered {
   border: 1px solid #9ca3af;
-  border-radius: var(--border-radius);
+  border-radius: 18px;
   padding: 15px;
+}
+
+.nav a {
+  padding: 10px;
+  border: none;
+  gap: 15px;
+  font-size: 1.2rem;
+}
+
+.form-select, .form-control {
+  background-color: rgb(59, 59, 59);
+  border-radius: 15px;
+}
+
+.form-control {
+  color: white;
+}
+
+.form-floating > textarea:not(:placeholder-shown) ~ label::after {
+  background-color: transparent !important;
+}
+
+.modal-body {
+  max-height: 60vh; /* altezza massima del contenuto */
+  overflow-y: auto; /* abilita lo scroll verticale */
+  padding-right: 1rem; /* evita che il testo venga coperto dalla scrollbar */
+}
+
+.form-floating > label, .form-select {
+  color: rgb(0, 217, 255);
+}
+
+.size-1 {
+  font-size: 1.2rem;
+}
+
+.size-2 {
+  font-size: 1.5rem;
+}
+
+.size-3 {
+  font-size: 1.8rem;
+}
+
+.neon-blue {
+  color: rgb(0, 217, 255);
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  color: rgb(0, 217, 255);
+}
+
+h2, .h2 {
+  margin-bottom: 15px;
 }
 
 .modernButton {
@@ -17530,7 +17538,7 @@ h2, .h2 {
   align-items: center;
   justify-content: center;
   padding: 15px 28px;
-  border-radius: var(--border-radius);
+  border-radius: 18px;
   background-color: rgba(148, 148, 148, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.25);
   color: white;
@@ -17560,11 +17568,11 @@ h2, .h2 {
 }
 
 .selectableButton {
-  align-items: center;
-  background-color: rgba(148, 148, 148, 0.2);
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  background-color: rgba(148, 148, 148, 0.2);
 }
 
 .selectableButton:hover {
@@ -17576,34 +17584,51 @@ h2, .h2 {
 }
 
 .selectableButton i {
-  font-size: var(--size-2);
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
-.nav a {
-  padding: 10px;
-  border: none;
+.serviceStartButton {
+  border-color: rgb(0, 217, 255);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: auto;
+  height: auto;
+  background: #111;
+  display: flex;
+  flex-direction: column;
   gap: 15px;
-  font-size: var(--size-1);
+  padding: 25px;
+  transition: right 0.3s ease;
+  z-index: 9999;
 }
 
-.form-select, .form-control {
-  background-color: rgb(59, 59, 59);
-  border-radius: 15px;
+.mobile-menu.active {
+  right: 0;
 }
 
-.form-control {
-  color: white;
+.burgerButtonMobile {
+  align-self: flex-end;
 }
 
-.form-floating > textarea:not(:placeholder-shown) ~ label::after {
-  background-color: transparent !important;
+.burgerButton {
+  display: none;
 }
 
-.modal-body {
-  max-height: 60vh; /* altezza massima del contenuto */
-  overflow-y: auto; /* abilita lo scroll verticale */
-  padding-right: 1rem; /* evita che il testo venga coperto dalla scrollbar */
+@media (max-width: 1199.98px) {
+  .text-center-md-down {
+    text-align: center !important;
+  }
+  .nav-links, .nav-extra-links {
+    display: none;
+  }
+  .burgerButton {
+    display: block !important;
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */
