@@ -1,15 +1,10 @@
 import { showNotification } from "./notification.js";
 
-
-
 (() => {
   "use strict";
 
   const selectedServiceForm = document.querySelector(".selectedServiceForm");
   const selectedServiceOverview = document.querySelector(".selectedServiceOverview");
-
-
-
 
   function attachFormListener(form) {
     if (!form) return;
@@ -28,13 +23,13 @@ import { showNotification } from "./notification.js";
 
       showNotification(
         `<div class="d-flex align-items-center">
-           <strong>Invio in corso...</strong>
-           <div class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></div>
-         </div>`,
+            <strong>Invio in corso...</strong>
+            <div class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></div>
+          </div>`,
         "default"
       );
 
-      fetch("php/sendForm.php", {
+      fetch("/php/sendForm.php", {
         method: "POST",
         body: new FormData(form),
       })
@@ -46,21 +41,20 @@ import { showNotification } from "./notification.js";
             form.reset();
             form.classList.remove("was-validated");
 
-            selectedServiceForm.innerHTML = "";
-            selectedServiceOverview.classList.remove("d-none");
+            if (selectedServiceForm) {
+              selectedServiceForm.innerHTML = "";
+            }
+            if (selectedServiceOverview) {
+              selectedServiceOverview.classList.remove("d-none");
+            }
           }
         })
         .catch((error) => showNotification(error, "default"));
     });
   }
 
-
-
   const existingForms = document.querySelectorAll(".needs-validation");
   existingForms.forEach((form) => attachFormListener(form));
-
-
-
 
   const observer = new MutationObserver((mutationsList) => {
     mutationsList.forEach((mutation) => {
