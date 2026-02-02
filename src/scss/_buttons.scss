@@ -55,7 +55,11 @@
   margin-bottom: 10px;
 }
 
-.serviceStartButton {
+.modernNeonButton {
+  border-color: $neon-blue;
+}
+
+.modernNeonButton:hover {
   border-color: $neon-blue;
 }
 

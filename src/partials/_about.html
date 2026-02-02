@@ -1,162 +1,24 @@
 <div class="container-fluid">
   <div class="row">
-    <aside class="col-md-3 col-lg-2 sidebar p-3">
-      <div class="text-center mb-4">
-        <img
-          src="/assets/images/profile-pic.webp"
-          alt=""
-          class="rounded-circle mb-2"
-          width="90"
-        />
-        <h5 class="mb-0">Michele Garofalo</h5>
-        <small class="text-muted">Programmatore - Tecnico informatico</small>
-      </div>
+    {% include "_cvSidebar.html" %}
 
-      <ul class="nav flex-column gap-2">
-        <li class="nav-item">
-          <a class="nav-link" href="#profile">Profilo</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#skills">Competenze</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#experience">Esperienza</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#edutacation">Formazione</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Progetti</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contacts">Contatti</a>
-        </li>
-      </ul>
-    </aside>
-
-    <main class="col-md-9 col-lg-10 px-4 py-3">
+        <main class="col-md-9 col-lg-10 px-4 py-3">
       <p style="font-size: 3rem">La pagina è ancora incompleta</p>
-      <a href="/assets/files/Michele_Garofalo_CV.pdf" download>
-        <p class="modernButton">Scarica CV</p>
+      {# <a href="/assets/files/Michele_Garofalo_CV.pdf" download> #}
+      <a>
+        <p class="modernButton modernNeonButton disabledButton">Scarica PDF</p>
+        Prossimamente...
       </a>
-      <div id="profile" class="mb-4">
-        <h2>Profilo</h2>
-        <p>
-          Sono un appassionato di informatica con una solida formazione
-          autodidatta, maturata in anni di studio costante della programmazione
-          in diverse tecnologie e del funzionamento dell’hardware. Ho sviluppato
-          competenze pratiche nella risoluzione dei problemi, nell’analisi
-          tecnica e nell’apprendimento rapido di nuovi strumenti, cercando di
-          realizzare dei piccoli progetti per interesse personale.
-        </p>
-      </div>
 
-      <div id="skills" class="mb-4">
-        <h2>Competenze</h2>
-        <ul class="row">
-          <li>Programmazione ad oggetti (Java, C#)</li>
-          <li>
-            Programmazione Full-Stack (HTML, CSS, JavaScript, PhP, MySQL,
-            Wordpress)
-          </li>
-          <li>Competenza hardware e conoscenza del mercato</li>
-          <li>Gestione server e community discord multicategoria</li>
-        </ul>
-      </div>
+      <div class="col-10">
+        
+      {% include "cvParts/_profile.html" %}
 
-      <div id="experience" class="mb-4">
-        <h2>Esperienza</h2>
-        <div>
-          <h6>Freelance IT Support</h6>
-          <small class="text-muted">Gen 2026 - In corso...</small>
-          <p>Assistenza tecnica, riparazioni PC, consulenza informatica.</p>
-        </div>
-        <div>
-          <h6>Tecnico informatico</h6>
-          <small class="text-muted"
-            >Set 2025 | A.S.I.A. Technology | Bari</small
-          >
-          <p>
-            Oltre all’attività di consulenza e vendita dei computer esposti, mi
-            sono occupato di interventi di riparazione e sostituzione hardware,
-            risoluzione di problematiche software e formattazione dei sistemi
-            operativi su richiesta. Inoltre, ho gestito lo smontaggio di
-            macchine obsolete, il recupero e lo smistamento delle componenti,
-            nonché l’organizzazione del magazzino.
-          </p>
-        </div>
-        <div>
-          <h6>Operatore call center (OutBound)</h6>
-          <small class="text-muted">Giu 2025 | Area Web S.R.L. | Bari</small>
-          <p>
-            Mi sono occupato di chiamare le aziende di tutta Italia tramite un
-            sistema aziendale per proporre un servizio di gestione riguardante
-            le schede Google delle attività, l’indicizzazione e la creazione di
-            eventuali app per le loro attività
-          </p>
-        </div>
-        <div>
-          <h6>Promoter telefonia</h6>
-          <small class="text-muted"
-            >Lug 2024 - Vodafone (Innovared S.R.L.) | Triggiano</small
-          >
-          <p>
-            Ho lavorato come promoter presso lo stand Vodafone nel centro
-            commerciale Bariblu (Triggiano). Il mio compito era quello di
-            offrire assistenza ai già clienti, vendere smartphone e di
-            illustrare ai passanti le alternative al loro piano mensile.
-          </p>
-        </div>
-        <div>
-          <h6>Barista</h6>
-          <small class="text-muted">Mar 2019 - Bar Aqua, Modugno</small>
-          <p>
-            Durante gli ultimi anni di scuola superiore ho svolto l’alternanza
-            scuola-lavoro presso due bar. In questi mi sono occupato della
-            caffetteria, del servizio ai tavoli, della pulizia del locale e
-            quando necessario, anche della gestione della cassa.
-          </p>
-        </div>
-        <div>
-          <h6>Gestione server di gioco</h6>
-          <p>
-            Durante gli studi mi sono occupato della creazione, configurazione e
-            manutenzione di un server di gioco insieme ad alcuni amici
-            utilizzando talvolta dei vps
-          </p>
-        </div>
-      </div>
+      {% include "cvParts/_skills.html" %}
 
-      <div id="education" class="mb-4">
-        <h2>Formazione</h2>
-        <div>
-          <h6>ITS Academy Apulia digital</h6>
-          <small class="text-muted">Dec 2025 - In corso...</small>
-        </div>
-        <div>
-          <h6>E.M.C. Tecnologie Industriali</h6>
-          <small class="text-muted">Lug 2025 - Ago 2025</small>
-        </div>
-        <div>
-          <h6>Woom Italia</h6>
-          <small class="text-muted">Dec 2024 - Gen 2025</small>
-        </div>
-        <div>
-          <h6>I.I.S.S. Ettore Majorana</h6>
-          <small class="text-muted">Set 2019 - Giu 2021</small>
-        </div>
-        <div>
-          <h6>I.P.S.S.A.R. Armando Perotti</h6>
-          <small class="text-muted">Set 2015 - Giu 2019</small>
-        </div>
-      </div>
+      {% include "cvParts/_experience.html" %}
 
-      <div id="contacts">
-        <h2>Contatti</h2>
-        <p>Telefono: +39 377 520 5995</p>
-        <p>Email: garofalomichele2001@gmail.com</p>
-        <p>Telegram: @Michelegaro01</p>
-      </div>
+      {% include "cvParts/_education.html" %}</div>
     </main>
   </div>
 </div>

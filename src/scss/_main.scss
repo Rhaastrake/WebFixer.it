@@ -88,3 +88,13 @@ a {
 .form-floating > label, .form-select {
   color: $neon-blue;
 }
+
+.cvPartElement {
+  padding: 10px;
+}
+
+.cvPartElement:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  border-radius: 15px;
+}
