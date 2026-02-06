@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
-    echo 'Metodo non consentito';
+    echo 'Method not allowed';
     exit;
 }
 
