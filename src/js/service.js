@@ -47,24 +47,26 @@ Il servizio include consigli pratici, interventi mirati e spiegazioni chiare, la
   </div>
 
   <!-- Tipo PC -->
-  <div class="mb-3">
+  <div class="form-floating mb-3">
     <select class="form-select" name="pcType" id="pcType" required>
-      <option value="" selected disabled>Si tratta di un PC fisso o portatile? *</option>
+      <option value="" selected disabled>Seleziona</option>
       <option value="desktop">Fisso</option>
       <option value="laptop">Portatile</option>
     </select>
+    <label for="pcType">Si tratta di un PC fisso o portatile? *</label>
   </div>
 
   <!-- Specifica servizio -->
-  <div class="mb-3">
+  <div class="form-floating mb-3">
     <select class="form-select" name="serviceSpecification" id="serviceSpecification" required>
-      <option value="" selected disabled>Di cosa si tratta? *</option>
+      <option value="" selected disabled>Seleziona</option>
       <option value="genericAssistance">Assistenza generica</option>
       <option value="software">Aiuto con uno o più programmi</option>
       <option value="cleaning">Pulizia</option>
       <option value="hardware">Cambio componenti</option>
       <option value="noBoot">Il PC non si accende</option>
     </select>
+    <label for="serviceSpecification">Di cosa si tratta? *</label>
   </div>
 
   <!-- Dettagli aggiuntivi -->
@@ -114,51 +116,56 @@ Posso anche guidarti nella ricerca delle migliori offerte sul mercato e risponde
   </div>
 
   <!-- Tipo PC -->
-  <div class="mb-3">
+  <div class="form-floating mb-3">
     <select class="form-select" name="pcType" id="pcType" required>
-      <option value="" selected disabled>Che tipo di PC desideri? *</option>
+      <option value="" selected disabled>Seleziona</option>
       <option value="desktop">Fisso</option>
       <option value="laptop">Portatile</option>
     </select>
+    <label for="pcType">Che tipo di PC desideri? *</label>
   </div>
 
     <!-- Tipo di utilizzo -->
-  <div class="mb-3">
+  <div class="form-floating mb-3">
     <select class="form-select" name="useType" id="useType" required>
-      <option value="" selected disabled>Cerchi un PC per giocare o lavorare? *</option>
+      <option value="" selected disabled>Seleziona</option>
       <option value="gaming">PC da gaming</option>
       <option value="office">PC da lavoro</option>
     </select>
+    <label for="useType">Cerchi un PC per giocare o lavorare? *</label>
   </div>
 
   <!-- Fascia di prezzo -->
-  <div class="mb-3">
+  <div class="form-floating mb-3">
     <select class="form-select" name="priceRange" id="priceRange" required>
-      <option value="" selected disabled>Indica una fascia di prezzo *</option>
+      <option value="" selected disabled>Seleziona</option>
       <option value="€500-€800">€500-€800</option>
       <option value="€800-€1200">€800-€1200</option>
       <option value="€1200-€1600">€1200-€1600</option>
       <option value="over-€1600">Più di €1600</option>
     </select>
+    <label for="priceRange">Indica una fascia di prezzo *</label>
   </div>
 
   <!-- Componenti usati -->
-  <div class="mb-3">
+  <div class="form-floating mb-3">
     <select class="form-select" name="secondHand" id="secondHand" required>
-      <option value="" selected disabled>Valuteresti l'usato? *</option>
+      <option value="" selected disabled>Seleziona</option>
       <option value="yes">Si, lo valuterei</option>
       <option value="no">No, voglio tutto nuovo</option>
       <option value="half">Solo in parte</option>
     </select>
+    <label for="secondHand">Valuteresti l'usato? *</label>
   </div>
 
   <!-- Schermo si no -->
-  <div class="mb-3">
+  <div class="form-floating mb-3">
     <select class="form-select" name="display" id="display" required>
-      <option value="" selected disabled>Cerchi anche uno schermo? *</option>
+      <option value="" selected disabled>Seleziona</option>
       <option value="yes">Si, ne ho bisogno</option>
       <option value="no">No, ne ho già uno</option>
     </select>
+    <label for="display">Cerchi anche uno schermo? *</label>
   </div>
 
   <!-- Dettagli aggiuntivi -->
@@ -249,12 +256,13 @@ Il servizio è pensato per aiutarti a mantenere i tuoi progetti online efficient
   </div>
 
   <!-- Integrazione database o servizi esterni -->
-  <div class="mb-3">
+  <div class="form-floating mb-3">
     <select class="form-select" name="dbIntegration" id="dbIntegration" required>
-    <option value="" selected disabled>Sono necessari database? *</option>
+    <option value="" selected disabled>Seleziona</option>
     <option value="yes">Si, è necessario</option>
     <option value="no">No, non è necessario</option>
     </select>
+    <label for="dbIntegration">Sono necessari database? *</label>
   </div>
 
   

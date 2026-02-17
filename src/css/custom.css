@@ -16671,7 +16671,7 @@ a {
   padding-right: 1rem; /* evita che il testo venga coperto dalla scrollbar */
 }
 
-.form-floating > label, .form-select {
+.form-floating > label {
   color: rgb(0, 217, 255);
 }
 

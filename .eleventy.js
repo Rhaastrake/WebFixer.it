@@ -19,6 +19,7 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: "src",
       includes: "partials",
+      data: "_data",
     },
   };
 };

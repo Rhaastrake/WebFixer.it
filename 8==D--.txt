@@ -1,0 +1,37 @@
+8==D--
+- Crea la cartella _data in src
+- Crea site.js
+dentro inserisci degli oggetti pari alle tue pagine come ad esempio ( + altro che può servire )
+module.exports = {
+    news : {
+        seo: {
+            title: "Il tuo titolo"
+            description: "La tua descrizione"
+            keywords: "Le tue keywords"
+        }
+    }
+}
+8==D--
+
+
+8==D--
+- Aggiungere alla config di return eleventy ( serve per dire ad eleventy che ciò che è in questa cartella, è globale e accessibile ovunquye)
+            data: "_data"
+8==D--
+
+
+8==D--
+- Nelle tue pagine njk aggiungi nel tag head
+
+<!-- Page Data based on Page Title -->
+{% set pageKey = 'il_nome_della_tua_pagina_come_news 8==D' | lower %}
+{% set pageData = site[pageKey] %}
+
+- A questo punto hai a disposizione nella pagina i dati nel site.js
+    <title>{{ pageData.seo.title or title or site.title }}</title>
+    <meta name="description" content="{{ pageData.seo.description or site.description }}">
+    <meta name="keywords" content="{{ pageData.seo.keywords }}">
+
+8==D--
+
+CAPISCI COME FUNZIONA POI VE NNANZ
