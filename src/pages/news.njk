@@ -9,7 +9,7 @@ permalink: /news/
 
     {% set partials = "src/partials/" %}
     {% set pageKey = 'news' | lower %}
-    {% set pageData = site[news] %}
+    {% set pageData = site[pageKey] %}
 
     <title>{{ pageData.seo.title or title or site.title }}</title>
     <meta name="description" content="{{ pageData.seo.description or site.description }}">

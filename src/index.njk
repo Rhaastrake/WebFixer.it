@@ -4,11 +4,11 @@
 
     {% set partials = "src/partials/" %}
     {% set pageKey = 'homepage' | lower %}
-    {% set pageData = site[homepage] %}
+    {% set pageData = site[pageKey] %}
 
     <title>{{ pageData.seo.title or title or site.title }}</title>
     <meta name="description" content="{{ pageData.seo.description or site.description }}">
-    <meta name="keywords" content="{{ pageData.seo.keywords }}">
+    <meta name="keywords" content="{{ pageData.seo.keywords or site.keywords }}">
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

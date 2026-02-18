@@ -8,7 +8,7 @@ permalink: /about/
   <head>
     {% set partials = "src/partials/" %}
     {% set pageKey = 'about' | lower %}
-    {% set pageData = site[about] %}
+    {% set pageData = site[pageKey] %}
  
     <title>{{ pageData.seo.title or title or site.title }}</title>
     <meta name="description" content="{{ pageData.seo.description or site.description }}">

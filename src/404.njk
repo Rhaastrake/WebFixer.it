@@ -3,8 +3,8 @@
   <head>
 
     {% set partials = "src/partials/" %}
-    {% set pageKey = 'homepage' | lower %}
-    {% set pageData = site[homepage] %}
+    {% set pageKey = '404' | lower %}
+    {% set pageData = site[pageKey] %}
 
     <title>{{ pageData.seo.title or title or site.title }}</title>
     <meta name="description" content="{{ pageData.seo.description or site.description }}">
